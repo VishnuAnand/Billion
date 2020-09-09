@@ -1,0 +1,26 @@
+{
+    "name": "framework/billion",
+    "type": "framework",
+    "description": "The Billion Framework",
+    "keywords": ["framework","billion"],
+    "homepage": "https://cmdevs.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vishnu Anand",
+            "email": "vishnu@billn.co",
+            "homepage": "https://billn.co/framework",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload":{
+        "psr-4":{
+            "core\\": "./core",
+            "controllers\\": "./app/controllers",
+            "models\\": "./app/models"
+        }
+    }
+}
