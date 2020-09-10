@@ -22,5 +22,7 @@
             "controllers\\": "./app/controllers",
             "models\\": "./app/models"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
