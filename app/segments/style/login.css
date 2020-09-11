@@ -1,0 +1,18 @@
+
+    .login-box{
+        padding: 8em;
+    }
+
+    .login-title {
+        color: #3b94f5;
+    }
+
+    .login-title h1{
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .login-title h1 span{
+        color: #424242;
+    }

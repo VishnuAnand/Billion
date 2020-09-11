@@ -14,7 +14,13 @@
 
             $view = preg_replace_callback('/(\{)(\{)((?:[a-zA-Z]*))(\})(\})/',
             function($match) use($variables){
-                return $variables[$match[3]];
+                $temporary_match;
+                if(isset($variables[$match[3]])){
+                    $temporary_match=$variables[$match[3]];
+                }else{
+                    $temporary_match=null;
+                }
+                return $temporary_match;
             }, $view);
 
         }
@@ -26,7 +32,6 @@
             return $r;
         }
 
-
         // protected function parse(string $template, array $data = [], array $options = null): string
         protected function parseCon(string $template, array $data = []): string
         {
@@ -37,7 +42,7 @@
 
             // Remove any possible PHP tags since we don't support it
             // and parseConditionals needs it clean anyway...
-            $template = str_replace(['<?', '?>'], ['&lt;?', '?&gt;'], $template);
+            $template = str_replace(["<php>", "</php>"], ["<?php", "?>"], $template);//&lt;?  ?&gt;
 
             // $template = $this->parseComments($template);
             // $template = $this->extractNoparse($template);

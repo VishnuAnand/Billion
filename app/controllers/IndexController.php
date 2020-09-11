@@ -4,7 +4,7 @@
     class IndexController extends BaseController{
 
         public function index(){
-            
+
             $data=$this->load->model('IndexModel');
             $name=$data->getName();
             $version=$data->getVersion();
@@ -22,6 +22,16 @@
                 ]
             ];
             $this->load->view('hello', $data);
+        }
+
+        public function login(){
+            $this->load->view('login');
+        }
+
+        public function get(){
+            $name=$_POST['name'];
+            $data=['name'=>$name];
+            $this->load->view('form',$data);
         }
     }
 ?>

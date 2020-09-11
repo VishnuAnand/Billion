@@ -31,6 +31,16 @@
             );
             echo $this->renderString($phpcode);
             
+            $script1="";
+            $script1=file_get_contents(BASEPATH.'/app/segments/script/script.seg');
+            echo $script1;
+            
+            $script="";
+            if(file_exists(BASEPATH.'/app/segments/script/'.$viewName.'.js')){
+                $script=file_get_contents(BASEPATH.'/app/segments/script/'.$viewName.'.js');
+            }
+            echo "<script>".$script."</script>";
+            
         }
 
                 
