@@ -12,7 +12,7 @@
         
         public function model($modelName){
 
-            $path=BASEPATH.'\\app\\models\\'.$modelName.'.php';
+            $path=BASEPATH.'/app/models/'.$modelName.'.php';
 
             if( file_exists($path) ){
                 $class = '\models\\'.$modelName; 
