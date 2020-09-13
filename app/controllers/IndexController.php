@@ -9,7 +9,7 @@
             $name=$data->getName();
             $version=$data->getVersion();
             $framework=$data->getFramework();
-            $data = [
+            $data1 = [
                 'name'   => $name,
                 'version' => $version,
                 'framework' => $framework,
@@ -21,7 +21,10 @@
                         ['title' => 'Title 5', 'body' => 'Body 5']
                 ]
             ];
-            $this->load->view('hello', $data);
+            
+            //$data->connection("test");    //Serve Database name to open connection
+            //$data->addData("Hello");      //Call custom model function
+            $this->load->view('hello', $data1);
         }
 
         public function login(){

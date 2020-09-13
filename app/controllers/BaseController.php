@@ -8,6 +8,7 @@
                 new \core\view\ViewLoader(BASEPATH.'/app/views/'),
                 new \core\view\Templating()
             );
+            $this->db = new \models\BaseModel();
         }
     }
 ?>

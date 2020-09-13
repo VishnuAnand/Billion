@@ -1,5 +1,5 @@
 <?php
 
-    $router->add('/framework/public/','IndexController#index');
+    $router->add('/','IndexController#index');
 
 ?>
