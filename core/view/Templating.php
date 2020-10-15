@@ -48,7 +48,7 @@
             // $template = $this->extractNoparse($template);
 
             // Replace any conditional code here so we don't have to parse as much
-            $template = $this->parseConditionals($template);
+            $template = $this->parseConditionals($template,$data);
 
             // Handle any plugins before normal data, so that
             // it can potentially modify any template between its tags.
@@ -388,7 +388,7 @@
          *
          * @return string
          */
-        protected function parseConditionals(string $template): string
+        protected function parseConditionals(string $template,array $data): string
         {
             $pattern = '/\{\s*(if|elseif)\s*((?:\()?(.*?)(?:\))?)\s*\}/ms';
 
